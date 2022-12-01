@@ -1,19 +1,19 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class VbInteractions : MonoBehaviour, IVirtualButtonEventHandler
+public class vb_anim : MonoBehaviour, IVirtualButtonEventHandler
 {
 
     public GameObject vbBtnObj;
     public Animator earthAnim;
-    
+
     void Start()
     {
         vbBtnObj = GameObject.Find("BotaoVirtual");
         vbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
-        earthAnim.GetComponent<Animator>();        
+        earthAnim.GetComponent<Animator>();
     }
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
@@ -22,12 +22,15 @@ public class VbInteractions : MonoBehaviour, IVirtualButtonEventHandler
         Debug.Log("Btn Pressed");
     }
 
-    public void OnButtonReLeased(VirtualButtonBehaviour vb)
+    public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        earthAnim.Play("none");
-        Debug.Log("Btn Pressed");
+        earthAnim.Play("unzoom_earth");
+        Debug.Log("Btn Released");
     }
 
-
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
-*/

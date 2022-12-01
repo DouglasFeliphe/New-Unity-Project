@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
@@ -28,3 +28,4 @@ public class RotateEarth : MonoBehaviour
     //    transform.Rotate(Vector3.up, speed * Time.deltaTime, Space.World);
     // }
 }
+*/
