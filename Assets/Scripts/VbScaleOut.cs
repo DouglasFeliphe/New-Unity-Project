@@ -28,13 +28,13 @@ public class VbScaleOut : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnButtonPressed");
+        Debug.Log("VbScaleOut OnButtonPressed");
         _ZoomOut = true;
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnButtonReleased");
+        Debug.Log("VbScaleOut OnButtonReleased");
         _ZoomOut = false;
     }
 }

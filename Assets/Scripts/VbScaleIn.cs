@@ -30,13 +30,13 @@ public class VbScaleIn : MonoBehaviour, IVirtualButtonEventHandler
 
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnButtonPressed");   
+        Debug.Log("VbScaleIn OnButtonPressed");   
          _ZoomIn = true;
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
-        Debug.Log("OnButtonReleased");     
+        Debug.Log("VbScaleIn OnButtonReleased");     
          _ZoomIn = false;
     }
 }
