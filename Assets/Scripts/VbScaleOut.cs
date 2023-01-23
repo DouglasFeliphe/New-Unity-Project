@@ -5,16 +5,18 @@ using Vuforia;
 
 public class VbScaleOut : MonoBehaviour, IVirtualButtonEventHandler
 {
-    public GameObject planet;
     public VirtualButtonBehaviour Vb;
     private Color vbDefaultColor;
     public float planetScale = 0.001f;
     private bool _ZoomOut = false;
+    private GameObject planets;
 
     void Start()
     {
         Vb.RegisterEventHandler(this);
         _ZoomOut = false;
+        //get the list of planets by name
+        planets = GameObject.Find("Planets");
     }
 
     // Update is called once per frame
@@ -22,8 +24,15 @@ public class VbScaleOut : MonoBehaviour, IVirtualButtonEventHandler
     {
         if (_ZoomOut)
         {
-            //make a bigger object
-            planet.transform.localScale -= new Vector3(planetScale, planetScale, planetScale);
+            for (int i = 0; i < planets.transform.childCount; i++)
+            {
+                //verify if the planet is selected
+                if (planets.transform.GetChild(i).GetComponent<PlanetSpin>().isSelected)
+                {
+                    //make a bigger object
+                    planets.transform.GetChild(i).localScale -= new Vector3(planetScale, planetScale, planetScale);
+                }
+            }
         }
     }
 
