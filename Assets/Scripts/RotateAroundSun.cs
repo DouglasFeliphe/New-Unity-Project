@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class planetRotator : MonoBehaviour
+public class RotateAroundSun : MonoBehaviour
 {
     public Transform sunTransform;
     public float orbitSpeed = 1.0f;
